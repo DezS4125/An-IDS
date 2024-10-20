@@ -1,3 +1,6 @@
 datasets/
 .ipynb_checkpoints/
 models/
+dummy/
+test_alldata_EDA.csv
+train_alldata_EDA.csv
