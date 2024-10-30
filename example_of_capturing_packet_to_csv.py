@@ -15,11 +15,11 @@ def extract_features(packet):
     features = {}
     
     # Flow-based features
-    features['Source IP'] = packet[IP].src
-    features['Destination IP'] = packet[IP].dst
-    features['Source Port'] = packet[TCP].sport if TCP in packet else packet[UDP].sport
-    features['Destination Port'] = packet[TCP].dport if TCP in packet else packet[UDP].dport
-    features['Protocol'] = packet[IP].proto
+    features['srcip'] = packet[IP].src
+    features['sport'] = packet[TCP].sport if TCP in packet else packet[UDP].sport
+    features['dstip'] = packet[IP].dst
+    features['dsport'] = packet[TCP].dport if TCP in packet else packet[UDP].dport
+    features['proto'] = packet[IP].proto #it's still a number, desired name 
     features['Flow Duration'] = packet.time - packet[Ether].time
     features['Total Fwd Bytes'] = packet[IP].len
     features['Total Bwd Bytes'] = packet[IP].len
