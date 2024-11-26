@@ -4,3 +4,8 @@ models/
 dummy/
 test_alldata_EDA.csv
 train_alldata_EDA.csv
+__pycache__/
+capture.pcap
+label_encoder.pkl
+my_lr.pkl
+result_dict.pkl
